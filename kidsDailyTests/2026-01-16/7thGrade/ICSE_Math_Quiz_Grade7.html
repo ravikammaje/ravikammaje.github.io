@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICSE Math Quiz - Grade 7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #333;
+            padding: 0.5in;
+        }
+        
+        @media print {
+            body { padding: 0.4in; }
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .header h1 {
+            color: #1a5276;
+            font-size: 20pt;
+            margin-bottom: 3px;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 11pt;
+        }
+        
+        .info-box {
+            border: 2px solid #2874a6;
+            background: #f4f9fc;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 10pt;
+        }
+        
+        .section-title {
+            background: #eaf2f8;
+            color: #2874a6;
+            font-weight: bold;
+            font-size: 12pt;
+            padding: 6px 10px;
+            margin: 15px 0 8px 0;
+            border-left: 4px solid #2874a6;
+        }
+        
+        .instruction {
+            color: #666;
+            font-style: italic;
+            font-size: 10pt;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        
+        /* MCQ Grid */
+        .mcq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        
+        .mcq-item {
+            padding: 8px;
+            font-size: 10pt;
+        }
+        
+        .mcq-item .question {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .mcq-item .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px 15px;
+            padding-left: 10px;
+            font-size: 10pt;
+        }
+        
+        /* Short Answer Questions */
+        .short-question {
+            margin-bottom: 12px;
+        }
+        
+        .short-question .q-text {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .answer-lines {
+            border-bottom: 1px solid #ccc;
+            height: 22px;
+            margin: 3px 0 3px 15px;
+        }
+        
+        .inline-blank {
+            display: inline-block;
+            border-bottom: 1px solid #333;
+            min-width: 80px;
+            margin: 0 5px;
+        }
+        
+        /* Math Problems */
+        .math-problem {
+            margin-bottom: 15px;
+        }
+        
+        .math-problem .title {
+            font-weight: bold;
+        }
+        
+        .math-problem .info {
+            margin: 5px 0;
+        }
+        
+        .math-problem .sub-questions {
+            padding-left: 15px;
+            margin: 5px 0;
+        }
+        
+        .working-label {
+            font-size: 9pt;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .working-space {
+            border: 1px solid #ddd;
+            min-height: 70px;
+            margin: 3px 0 5px 15px;
+            background: #fcfcfc;
+        }
+        
+        /* Answer Key */
+        .answer-key-header {
+            text-align: center;
+            color: #1a5276;
+            font-size: 16pt;
+            margin-bottom: 5px;
+        }
+        
+        .answer-key-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 10pt;
+            margin-bottom: 15px;
+        }
+        
+        .answer-section {
+            color: #2874a6;
+            font-weight: bold;
+            font-size: 11pt;
+            margin: 12px 0 6px 0;
+            border-bottom: 1px solid #2874a6;
+            padding-bottom: 3px;
+        }
+        
+        .answer-item {
+            font-size: 10pt;
+            margin: 5px 0;
+            padding-left: 10px;
+        }
+        
+        .answer-item b {
+            color: #1a5276;
+        }
+        
+        hr.divider {
+            border: none;
+            border-top: 2px solid #2874a6;
+            margin: 10px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 9pt;
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 8px;
+        }
+        
+        .fraction {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .fraction .num {
+            display: block;
+            border-bottom: 1px solid #333;
+            padding: 0 3px;
+        }
+        
+        .fraction .den {
+            display: block;
+            padding: 0 3px;
+        }
+        
+        sup, sub {
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>📐 ICSE Math Quiz</h1>
+    <div class="subtitle">Grade 7 | Test Your Mathematical Skills!</div>
+</div>
+
+<div class="info-box">
+    <span>Name: ________________________________</span>
+    <span>Class: ________</span>
+    <span>Section: ________</span>
+    <span>Date: ______________</span>
+    <span>Marks: _____ / 50</span>
+</div>
+
+<!-- SECTION A: MCQ -->
+<div class="section-title">Section A: Multiple Choice Questions</div>
+<div class="instruction">Choose the correct answer and circle it. (1 mark each = 5 marks)</div>
+
+<div class="mcq-grid">
+    <div class="mcq-item">
+        <div class="question">1. What is the value of (−3) × (−4) × (−2)?</div>
+        <div class="options">
+            <span>(a) 24</span>
+            <span>(b) −24</span>
+            <span>(c) 12</span>
+            <span>(d) −12</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">2. If 3x − 7 = 14, then x = ?</div>
+        <div class="options">
+            <span>(a) 5</span>
+            <span>(b) 6</span>
+            <span>(c) 7</span>
+            <span>(d) 8</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">3. Express 0.375 as a fraction in lowest terms:</div>
+        <div class="options">
+            <span>(a) 3/8</span>
+            <span>(b) 3/4</span>
+            <span>(c) 5/8</span>
+            <span>(d) 375/100</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">4. The sum of angles of a triangle is:</div>
+        <div class="options">
+            <span>(a) 90°</span>
+            <span>(b) 180°</span>
+            <span>(c) 270°</span>
+            <span>(d) 360°</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">5. What is 15% of 240?</div>
+        <div class="options">
+            <span>(a) 32</span>
+            <span>(b) 34</span>
+            <span>(c) 36</span>
+            <span>(d) 38</span>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION B: SHORT ANSWERS -->
+<div class="section-title">Section B: Short Answer Questions</div>
+<div class="instruction">Show your working and write the answer clearly. (3 marks each = 15 marks)</div>
+
+<div class="short-question">
+    <div class="q-text">1. Simplify the following algebraic expression:</div>
+    <div style="padding-left: 15px; margin: 8px 0;">
+        <b>5(2x − 3) − 3(x + 4) + 7</b>
+    </div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+</div>
+
+<div class="short-question">
+    <div class="q-text">2. Find the value of x in the following equation:</div>
+    <div style="padding-left: 15px; margin: 8px 0;">
+        <b>(x + 5)/3 = (2x − 1)/4</b>
+    </div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+</div>
+
+<div class="short-question">
+    <div class="q-text">3. Two complementary angles are in the ratio 2:3. Find both angles.</div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+</div>
+
+<div class="short-question">
+    <div class="q-text">4. Evaluate using properties of rational numbers:</div>
+    <div style="padding-left: 15px; margin: 8px 0;">
+        <b>(−3/7) × (2/5) + (−3/7) × (3/5)</b>
+    </div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+</div>
+
+<div class="short-question">
+    <div class="q-text">5. The mean of 5 numbers is 18. If one number is excluded, the mean becomes 16. Find the excluded number.</div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+</div>
+
+<!-- SECTION C: WORD PROBLEMS -->
+<div class="section-title">Section C: Word Problems</div>
+<div class="instruction">Solve each problem showing all steps clearly. (6 marks each = 30 marks)</div>
+
+<div class="math-problem">
+    <div class="title">1. Profit and Loss:</div>
+    <div class="info">A shopkeeper bought a bicycle for ₹4,500 and spent ₹300 on its repairs. He then sold it for ₹5,280.</div>
+    <div class="sub-questions">
+        (a) Find the total cost price.<br>
+        (b) Find the profit or loss amount.<br>
+        (c) Calculate the profit or loss percentage.
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">2. Simple Interest:</div>
+    <div class="info">Rahul deposited ₹12,000 in a bank at a rate of 8% per annum simple interest.</div>
+    <div class="sub-questions">
+        (a) How much interest will he earn in 3 years?<br>
+        (b) What will be the total amount after 3 years?<br>
+        (c) In how many years will the interest equal ₹4,800?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">3. Ratio and Proportion:</div>
+    <div class="info">The ages of A and B are in the ratio 5:7. Four years from now, their ages will be in the ratio 3:4.</div>
+    <div class="sub-questions">
+        (a) Find the present ages of A and B.<br>
+        (b) What was the ratio of their ages 6 years ago?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">4. Geometry - Triangles:</div>
+    <div class="info">In triangle ABC, the exterior angle at C is 110°. If ∠A = 3x and ∠B = 2x + 10°.</div>
+    <div class="sub-questions">
+        (a) Using the exterior angle property, form an equation and solve for x.<br>
+        (b) Find the measures of ∠A, ∠B, and ∠C.<br>
+        (c) What type of triangle is ABC based on its angles?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">5. Perimeter and Area:</div>
+    <div class="info">A rectangular garden is 25 m long and 18 m wide. A path of width 2 m runs inside along the boundary of the garden.</div>
+    <div class="sub-questions">
+        (a) Find the area of the garden.<br>
+        (b) Find the dimensions and area of the inner rectangle (excluding the path).<br>
+        (c) Find the area of the path.<br>
+        (d) If the cost of laying tiles on the path is ₹150 per m², find the total cost.
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<!-- ANSWER KEY - NEW PAGE -->
+<div class="page-break"></div>
+
+<h2 class="answer-key-header">📝 ANSWER KEY</h2>
+<div class="answer-key-subtitle">For Teacher / Parent Use Only</div>
+<hr class="divider">
+
+<div class="answer-section">Section A: Multiple Choice Answers</div>
+<div class="answer-item"><b>1. (b) −24</b> — Three negative numbers: (−3)×(−4)=12, then 12×(−2)=−24</div>
+<div class="answer-item"><b>2. (c) 7</b> — 3x − 7 = 14 → 3x = 21 → x = 7</div>
+<div class="answer-item"><b>3. (a) 3/8</b> — 0.375 = 375/1000 = 3/8</div>
+<div class="answer-item"><b>4. (b) 180°</b> — Angle sum property of triangles</div>
+<div class="answer-item"><b>5. (c) 36</b> — 15% of 240 = (15/100) × 240 = 36</div>
+
+<div class="answer-section">Section B: Short Answer Solutions</div>
+<div class="answer-item">
+    <b>1. Simplify:</b> 5(2x−3) − 3(x+4) + 7<br>
+    &nbsp;&nbsp;= 10x − 15 − 3x − 12 + 7<br>
+    &nbsp;&nbsp;= <b>7x − 20</b>
+</div>
+<div class="answer-item">
+    <b>2. Solve:</b> (x+5)/3 = (2x−1)/4<br>
+    &nbsp;&nbsp;Cross multiply: 4(x+5) = 3(2x−1)<br>
+    &nbsp;&nbsp;4x + 20 = 6x − 3 → 23 = 2x → <b>x = 11.5</b>
+</div>
+<div class="answer-item">
+    <b>3. Complementary angles:</b> Sum = 90°, Ratio 2:3<br>
+    &nbsp;&nbsp;2x + 3x = 90° → 5x = 90° → x = 18°<br>
+    &nbsp;&nbsp;Angles: <b>36° and 54°</b>
+</div>
+<div class="answer-item">
+    <b>4. Rational numbers:</b> Using distributive property<br>
+    &nbsp;&nbsp;= (−3/7) × [(2/5) + (3/5)] = (−3/7) × (5/5) = (−3/7) × 1 = <b>−3/7</b>
+</div>
+<div class="answer-item">
+    <b>5. Mean problem:</b><br>
+    &nbsp;&nbsp;Sum of 5 numbers = 5 × 18 = 90<br>
+    &nbsp;&nbsp;Sum of 4 numbers = 4 × 16 = 64<br>
+    &nbsp;&nbsp;Excluded number = 90 − 64 = <b>26</b>
+</div>
+
+<div class="answer-section">Section C: Word Problem Solutions</div>
+<div class="answer-item">
+    <b>1. Profit and Loss:</b><br>
+    &nbsp;&nbsp;(a) Total CP = 4500 + 300 = <b>₹4,800</b><br>
+    &nbsp;&nbsp;(b) SP = ₹5,280, Profit = 5280 − 4800 = <b>₹480</b><br>
+    &nbsp;&nbsp;(c) Profit % = (480/4800) × 100 = <b>10%</b>
+</div>
+<div class="answer-item">
+    <b>2. Simple Interest:</b> P = ₹12,000, R = 8%<br>
+    &nbsp;&nbsp;(a) SI = (P×R×T)/100 = (12000×8×3)/100 = <b>₹2,880</b><br>
+    &nbsp;&nbsp;(b) Amount = 12000 + 2880 = <b>₹14,880</b><br>
+    &nbsp;&nbsp;(c) 4800 = (12000×8×T)/100 → T = 4800/960 = <b>5 years</b>
+</div>
+<div class="answer-item">
+    <b>3. Ratio and Proportion:</b><br>
+    &nbsp;&nbsp;Let ages be 5x and 7x. After 4 years: (5x+4):(7x+4) = 3:4<br>
+    &nbsp;&nbsp;4(5x+4) = 3(7x+4) → 20x+16 = 21x+12 → x = 4<br>
+    &nbsp;&nbsp;(a) A = 20 years, B = <b>28 years</b><br>
+    &nbsp;&nbsp;(b) 6 years ago: (20−6):(28−6) = 14:22 = <b>7:11</b>
+</div>
+<div class="answer-item">
+    <b>4. Triangles:</b><br>
+    &nbsp;&nbsp;Exterior angle = sum of opposite interior angles<br>
+    &nbsp;&nbsp;(a) 3x + (2x+10) = 110° → 5x = 100° → <b>x = 20°</b><br>
+    &nbsp;&nbsp;(b) ∠A = 60°, ∠B = 50°, ∠C = 180° − 110° = <b>70°</b><br>
+    &nbsp;&nbsp;(c) All angles < 90°, so <b>Acute-angled triangle</b>
+</div>
+<div class="answer-item">
+    <b>5. Perimeter and Area:</b><br>
+    &nbsp;&nbsp;(a) Garden area = 25 × 18 = <b>450 m²</b><br>
+    &nbsp;&nbsp;(b) Inner rectangle: (25−4) × (18−4) = 21 × 14 = <b>294 m²</b><br>
+    &nbsp;&nbsp;(c) Path area = 450 − 294 = <b>156 m²</b><br>
+    &nbsp;&nbsp;(d) Cost = 156 × 150 = <b>₹23,400</b>
+</div>
+
+<div class="footer">Based on ICSE Grade 7 Math Syllabus | Total Marks: 50</div>
+
+</body>
+</html>

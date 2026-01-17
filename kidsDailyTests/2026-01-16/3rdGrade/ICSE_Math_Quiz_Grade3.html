@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICSE Math Quiz - Grade 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #333;
+            padding: 0.5in;
+        }
+        
+        @media print {
+            body { padding: 0.4in; }
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .header h1 {
+            color: #1a5276;
+            font-size: 20pt;
+            margin-bottom: 3px;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 11pt;
+        }
+        
+        .info-box {
+            border: 2px solid #2874a6;
+            background: #f4f9fc;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 10pt;
+        }
+        
+        .section-title {
+            background: #eaf2f8;
+            color: #2874a6;
+            font-weight: bold;
+            font-size: 12pt;
+            padding: 6px 10px;
+            margin: 15px 0 8px 0;
+            border-left: 4px solid #2874a6;
+        }
+        
+        .instruction {
+            color: #666;
+            font-style: italic;
+            font-size: 10pt;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        
+        /* MCQ Grid */
+        .mcq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        
+        .mcq-item {
+            padding: 8px;
+            font-size: 10pt;
+        }
+        
+        .mcq-item .question {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .mcq-item .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px 15px;
+            padding-left: 10px;
+            font-size: 10pt;
+        }
+        
+        /* Essay/Short Answer Questions */
+        .short-question {
+            margin-bottom: 12px;
+        }
+        
+        .short-question .q-text {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .answer-lines {
+            border-bottom: 1px solid #ccc;
+            height: 22px;
+            margin: 3px 0 3px 15px;
+        }
+        
+        .answer-box {
+            border: 1px solid #ccc;
+            height: 28px;
+            width: 120px;
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        /* Math Problems */
+        .math-problem {
+            margin-bottom: 15px;
+        }
+        
+        .math-problem .title {
+            font-weight: bold;
+        }
+        
+        .math-problem .info {
+            margin: 5px 0;
+        }
+        
+        .math-problem .sub-questions {
+            padding-left: 15px;
+            margin: 5px 0;
+        }
+        
+        .working-label {
+            font-size: 9pt;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .working-space {
+            border: 1px solid #ddd;
+            min-height: 60px;
+            margin: 3px 0 5px 15px;
+            background: #fcfcfc;
+        }
+        
+        /* Tables for math */
+        .math-table {
+            border-collapse: collapse;
+            margin: 10px 15px;
+        }
+        
+        .math-table td {
+            border: 1px solid #ccc;
+            padding: 8px 15px;
+            text-align: center;
+            min-width: 50px;
+        }
+        
+        .math-table .header-row {
+            background: #eaf2f8;
+            font-weight: bold;
+        }
+        
+        /* Shapes */
+        .shapes-container {
+            display: flex;
+            gap: 30px;
+            margin: 10px 15px;
+            align-items: center;
+        }
+        
+        .shape {
+            text-align: center;
+        }
+        
+        .shape-box {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #333;
+            margin-bottom: 5px;
+        }
+        
+        .shape-circle {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+        
+        .shape-triangle {
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 45px solid transparent;
+            border-bottom-color: transparent;
+            position: relative;
+            margin-bottom: 5px;
+        }
+        
+        .shape-triangle::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: -23px;
+            width: 0;
+            height: 0;
+            border-left: 23px solid transparent;
+            border-right: 23px solid transparent;
+            border-bottom: 41px solid #333;
+        }
+        
+        /* Answer Key */
+        .answer-key-header {
+            text-align: center;
+            color: #1a5276;
+            font-size: 16pt;
+            margin-bottom: 5px;
+        }
+        
+        .answer-key-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 10pt;
+            margin-bottom: 15px;
+        }
+        
+        .answer-section {
+            color: #2874a6;
+            font-weight: bold;
+            font-size: 11pt;
+            margin: 12px 0 6px 0;
+            border-bottom: 1px solid #2874a6;
+            padding-bottom: 3px;
+        }
+        
+        .answer-item {
+            font-size: 10pt;
+            margin: 5px 0;
+            padding-left: 10px;
+        }
+        
+        .answer-item b {
+            color: #1a5276;
+        }
+        
+        hr.divider {
+            border: none;
+            border-top: 2px solid #2874a6;
+            margin: 10px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 9pt;
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 8px;
+        }
+        
+        .inline-blank {
+            display: inline-block;
+            border-bottom: 1px solid #333;
+            min-width: 60px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>📐 ICSE Math Quiz</h1>
+    <div class="subtitle">Grade 3 | Challenge Your Brain!</div>
+</div>
+
+<div class="info-box">
+    <span>Name: ________________________________</span>
+    <span>Class: ________</span>
+    <span>Section: ________</span>
+    <span>Date: ______________</span>
+    <span>Marks: _____ / 50</span>
+</div>
+
+<!-- SECTION A: MCQ -->
+<div class="section-title">Section A: Multiple Choice Questions</div>
+<div class="instruction">Choose the correct answer and circle it. (1 mark each = 5 marks)</div>
+
+<div class="mcq-grid">
+    <div class="mcq-item">
+        <div class="question">1. What is the place value of 5 in 3,572?</div>
+        <div class="options">
+            <span>(a) 5</span>
+            <span>(b) 50</span>
+            <span>(c) 500</span>
+            <span>(d) 5000</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">2. Which fraction is the largest?</div>
+        <div class="options">
+            <span>(a) 1/2</span>
+            <span>(b) 1/4</span>
+            <span>(c) 1/3</span>
+            <span>(d) 1/8</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">3. 456 + 278 = ?</div>
+        <div class="options">
+            <span>(a) 624</span>
+            <span>(b) 734</span>
+            <span>(c) 724</span>
+            <span>(d) 634</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">4. How many sides does a hexagon have?</div>
+        <div class="options">
+            <span>(a) 4</span>
+            <span>(b) 5</span>
+            <span>(c) 6</span>
+            <span>(d) 8</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">5. 7 × 8 = ?</div>
+        <div class="options">
+            <span>(a) 54</span>
+            <span>(b) 56</span>
+            <span>(c) 58</span>
+            <span>(d) 63</span>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION B: FILL IN THE BLANKS & SHORT ANSWERS -->
+<div class="section-title">Section B: Fill in the Blanks & Short Answers</div>
+<div class="instruction">Write your answers clearly. (3 marks each = 15 marks)</div>
+
+<div class="short-question">
+    <div class="q-text">1. Write the following numbers in words:</div>
+    <div style="padding-left: 15px; margin-top: 5px;">
+        (a) 4,825: <span class="inline-blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br><br>
+        (b) 7,096: <span class="inline-blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </div>
+</div>
+
+<div class="short-question">
+    <div class="q-text">2. Complete the pattern:</div>
+    <div style="padding-left: 15px; margin-top: 5px;">
+        (a) 15, 30, 45, <span class="inline-blank"></span>, <span class="inline-blank"></span>, <span class="inline-blank"></span><br><br>
+        (b) 100, 92, 84, <span class="inline-blank"></span>, <span class="inline-blank"></span>, <span class="inline-blank"></span>
+    </div>
+</div>
+
+<div class="short-question">
+    <div class="q-text">3. Convert:</div>
+    <div style="padding-left: 15px; margin-top: 5px;">
+        (a) 3 metres = <span class="inline-blank"></span> centimetres<br><br>
+        (b) 2 kg 500 g = <span class="inline-blank"></span> grams<br><br>
+        (c) 1 hour 30 minutes = <span class="inline-blank"></span> minutes
+    </div>
+</div>
+
+<div class="short-question">
+    <div class="q-text">4. Arrange in ascending order (smallest to largest):</div>
+    <div style="padding-left: 15px; margin-top: 5px;">
+        2,456 &nbsp;&nbsp; 2,564 &nbsp;&nbsp; 2,465 &nbsp;&nbsp; 2,546<br><br>
+        Answer: <span class="inline-blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> &lt; <span class="inline-blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> &lt; <span class="inline-blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> &lt; <span class="inline-blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </div>
+</div>
+
+<div class="short-question">
+    <div class="q-text">5. Look at the tally chart and answer:</div>
+    <table class="math-table">
+        <tr class="header-row">
+            <td>Fruit</td>
+            <td>Tally</td>
+            <td>Number</td>
+        </tr>
+        <tr>
+            <td>🍎 Apple</td>
+            <td>|||| |||</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>🍌 Banana</td>
+            <td>|||| |||| |</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>🍊 Orange</td>
+            <td>|||| |</td>
+            <td></td>
+        </tr>
+    </table>
+    <div style="padding-left: 15px;">
+        (a) Fill in the "Number" column above.<br>
+        (b) Which fruit is most popular? <span class="inline-blank"></span><br>
+        (c) How many fruits in total? <span class="inline-blank"></span>
+    </div>
+</div>
+
+<!-- SECTION C: WORD PROBLEMS -->
+<div class="section-title">Section C: Word Problems</div>
+<div class="instruction">Solve each problem and show your working. (6 marks each = 30 marks)</div>
+
+<div class="math-problem">
+    <div class="title">1. Shopping:</div>
+    <div class="info">Priya went to a bookshop. She bought a notebook for ₹45, a pencil box for ₹78, and an eraser for ₹12. She gave the shopkeeper ₹200.</div>
+    <div class="sub-questions">
+        (a) How much did she spend in total?<br>
+        (b) How much change did she get back?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">2. Sharing Equally:</div>
+    <div class="info">A teacher has <b>96 chocolates</b> to distribute equally among <b>8 students</b>.</div>
+    <div class="sub-questions">
+        (a) How many chocolates will each student get?<br>
+        (b) If 3 more students join, and the teacher has another 36 chocolates, how many will each of the 11 students get now?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">3. Time Problem:</div>
+    <div class="info">Aarav's school starts at <b>8:15 AM</b>. He takes <b>25 minutes</b> to get ready and <b>20 minutes</b> to reach school.</div>
+    <div class="sub-questions">
+        (a) What time should Aarav wake up to reach school on time?<br>
+        (b) School ends at 2:30 PM. How many hours and minutes is Aarav in school?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">4. Multiplication & Addition:</div>
+    <div class="info">A fruit seller has <b>7 boxes</b> of mangoes. Each box contains <b>24 mangoes</b>. He sells <b>85 mangoes</b> in the morning.</div>
+    <div class="sub-questions">
+        (a) How many mangoes does he have in total?<br>
+        (b) How many mangoes are left after the morning sale?<br>
+        (c) If he packs the remaining mangoes in bags of 6, how many bags can he make?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">5. Measurement:</div>
+    <div class="info">Meera has a ribbon that is <b>3 metres</b> long. She cuts it into pieces of <b>25 cm</b> each to make bows.</div>
+    <div class="sub-questions">
+        (a) How many centimetres is the ribbon?<br>
+        (b) How many bows can she make?<br>
+        (c) How much ribbon is left over?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<!-- ANSWER KEY - NEW PAGE -->
+<div class="page-break"></div>
+
+<h2 class="answer-key-header">📝 ANSWER KEY</h2>
+<div class="answer-key-subtitle">For Teacher / Parent Use Only</div>
+<hr class="divider">
+
+<div class="answer-section">Section A: Multiple Choice Answers</div>
+<div class="answer-item"><b>1. (c) 500</b> — The 5 is in the hundreds place.</div>
+<div class="answer-item"><b>2. (a) 1/2</b> — Half is larger than 1/3, 1/4, or 1/8.</div>
+<div class="answer-item"><b>3. (b) 734</b> — 456 + 278 = 734.</div>
+<div class="answer-item"><b>4. (c) 6</b> — A hexagon has 6 sides.</div>
+<div class="answer-item"><b>5. (b) 56</b> — 7 × 8 = 56.</div>
+
+<div class="answer-section">Section B: Fill in the Blanks & Short Answers</div>
+<div class="answer-item"><b>1.</b> (a) Four thousand eight hundred twenty-five (b) Seven thousand ninety-six</div>
+<div class="answer-item"><b>2.</b> (a) 60, 75, 90 (adding 15 each time) (b) 76, 68, 60 (subtracting 8 each time)</div>
+<div class="answer-item"><b>3.</b> (a) 300 cm (b) 2500 g (c) 90 minutes</div>
+<div class="answer-item"><b>4.</b> 2,456 &lt; 2,465 &lt; 2,546 &lt; 2,564</div>
+<div class="answer-item"><b>5.</b> Apple = 8, Banana = 11, Orange = 6. (a) See numbers (b) Banana (c) 8+11+6 = <b>25 fruits</b></div>
+
+<div class="answer-section">Section C: Word Problem Solutions</div>
+<div class="answer-item">
+    <b>1. Shopping:</b><br>
+    &nbsp;&nbsp;(a) Total spent = 45 + 78 + 12 = <b>₹135</b><br>
+    &nbsp;&nbsp;(b) Change = 200 − 135 = <b>₹65</b>
+</div>
+<div class="answer-item">
+    <b>2. Sharing:</b><br>
+    &nbsp;&nbsp;(a) 96 ÷ 8 = <b>12 chocolates</b> each<br>
+    &nbsp;&nbsp;(b) Total chocolates = 96 + 36 = 132. Students = 11. 132 ÷ 11 = <b>12 chocolates</b> each
+</div>
+<div class="answer-item">
+    <b>3. Time:</b><br>
+    &nbsp;&nbsp;(a) Time needed = 25 + 20 = 45 min before 8:15 AM → <b>7:30 AM</b><br>
+    &nbsp;&nbsp;(b) From 8:15 AM to 2:30 PM = <b>6 hours 15 minutes</b>
+</div>
+<div class="answer-item">
+    <b>4. Mangoes:</b><br>
+    &nbsp;&nbsp;(a) Total = 7 × 24 = <b>168 mangoes</b><br>
+    &nbsp;&nbsp;(b) Left = 168 − 85 = <b>83 mangoes</b><br>
+    &nbsp;&nbsp;(c) 83 ÷ 6 = 13 remainder 5 → <b>13 full bags</b> (5 left over)
+</div>
+<div class="answer-item">
+    <b>5. Ribbon:</b><br>
+    &nbsp;&nbsp;(a) 3 m = <b>300 cm</b><br>
+    &nbsp;&nbsp;(b) 300 ÷ 25 = <b>12 bows</b><br>
+    &nbsp;&nbsp;(c) 300 − (12 × 25) = 300 − 300 = <b>0 cm</b> (no leftover)
+</div>
+
+<div class="footer">Based on ICSE Grade 3 Math Syllabus | Total Marks: 50</div>
+
+</body>
+</html>

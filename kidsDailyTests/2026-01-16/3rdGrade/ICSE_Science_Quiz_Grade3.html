@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICSE Science Quiz - Grade 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #333;
+            padding: 0.5in;
+        }
+        
+        @media print {
+            body { padding: 0.4in; }
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .header h1 {
+            color: #1a5276;
+            font-size: 20pt;
+            margin-bottom: 3px;
+        }
+        
+        .header .subtitle {
+            color: #666;
+            font-size: 11pt;
+        }
+        
+        .info-box {
+            border: 2px solid #2874a6;
+            background: #f4f9fc;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 10pt;
+        }
+        
+        .info-box span {
+            white-space: nowrap;
+        }
+        
+        .section-title {
+            background: #eaf2f8;
+            color: #2874a6;
+            font-weight: bold;
+            font-size: 12pt;
+            padding: 6px 10px;
+            margin: 15px 0 8px 0;
+            border-left: 4px solid #2874a6;
+        }
+        
+        .instruction {
+            color: #666;
+            font-style: italic;
+            font-size: 10pt;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        
+        /* MCQ Grid */
+        .mcq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        
+        .mcq-item {
+            padding: 8px;
+            font-size: 10pt;
+        }
+        
+        .mcq-item .question {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .mcq-item .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px 15px;
+            padding-left: 10px;
+            font-size: 10pt;
+        }
+        
+        /* Essay Questions */
+        .essay-question {
+            margin-bottom: 12px;
+        }
+        
+        .essay-question .q-text {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .answer-lines {
+            border-bottom: 1px solid #ccc;
+            height: 22px;
+            margin: 3px 0 3px 15px;
+        }
+        
+        /* Math Problems */
+        .math-problem {
+            margin-bottom: 15px;
+        }
+        
+        .math-problem .title {
+            font-weight: bold;
+        }
+        
+        .math-problem .info {
+            margin: 5px 0;
+        }
+        
+        .math-problem .sub-questions {
+            padding-left: 15px;
+            margin: 5px 0;
+        }
+        
+        .working-label {
+            font-size: 9pt;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .working-space {
+            border: 1px solid #ddd;
+            min-height: 60px;
+            margin: 3px 0 5px 15px;
+            background: #fcfcfc;
+        }
+        
+        /* Answer Key */
+        .answer-key-header {
+            text-align: center;
+            color: #1a5276;
+            font-size: 16pt;
+            margin-bottom: 5px;
+        }
+        
+        .answer-key-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 10pt;
+            margin-bottom: 15px;
+        }
+        
+        .answer-section {
+            color: #2874a6;
+            font-weight: bold;
+            font-size: 11pt;
+            margin: 12px 0 6px 0;
+            border-bottom: 1px solid #2874a6;
+            padding-bottom: 3px;
+        }
+        
+        .answer-item {
+            font-size: 10pt;
+            margin: 5px 0;
+            padding-left: 10px;
+        }
+        
+        .answer-item b {
+            color: #1a5276;
+        }
+        
+        hr.divider {
+            border: none;
+            border-top: 2px solid #2874a6;
+            margin: 10px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #888;
+            font-size: 9pt;
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>🔬 ICSE Science Quiz</h1>
+    <div class="subtitle">Grade 3 | For Smart Young Scientists</div>
+</div>
+
+<div class="info-box">
+    <span>Name: ________________________________</span>
+    <span>Class: ________</span>
+    <span>Section: ________</span>
+    <span>Date: ______________</span>
+    <span>Marks: _____ / 50</span>
+</div>
+
+<!-- SECTION A: MCQ -->
+<div class="section-title">Section A: Multiple Choice Questions</div>
+<div class="instruction">Choose the correct answer and circle it. (1 mark each = 5 marks)</div>
+
+<div class="mcq-grid">
+    <div class="mcq-item">
+        <div class="question">1. Which part of a plant makes food using sunlight?</div>
+        <div class="options">
+            <span>(a) Root</span>
+            <span>(b) Stem</span>
+            <span>(c) Leaf</span>
+            <span>(d) Flower</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">2. What do we call animals that eat only plants?</div>
+        <div class="options">
+            <span>(a) Carnivores</span>
+            <span>(b) Herbivores</span>
+            <span>(c) Omnivores</span>
+            <span>(d) Insectivores</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">3. Which of these is NOT a state of matter?</div>
+        <div class="options">
+            <span>(a) Solid</span>
+            <span>(b) Liquid</span>
+            <span>(c) Gas</span>
+            <span>(d) Energy</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">4. How many bones does an adult human body have?</div>
+        <div class="options">
+            <span>(a) 106</span>
+            <span>(b) 156</span>
+            <span>(c) 206</span>
+            <span>(d) 256</span>
+        </div>
+    </div>
+    <div class="mcq-item">
+        <div class="question">5. Which gas do plants take in during photosynthesis?</div>
+        <div class="options">
+            <span>(a) Oxygen</span>
+            <span>(b) Nitrogen</span>
+            <span>(c) Carbon Dioxide</span>
+            <span>(d) Hydrogen</span>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION B: ESSAY -->
+<div class="section-title">Section B: Short Answer Questions</div>
+<div class="instruction">Answer each question in 3-4 complete sentences. (3 marks each = 15 marks)</div>
+
+<div class="essay-question">
+    <div class="q-text">1. Why is water important for living things? Give two examples of how animals and plants use water.</div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+</div>
+
+<div class="essay-question">
+    <div class="q-text">2. Explain how a seed grows into a plant. What does a seed need to germinate?</div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+</div>
+
+<div class="essay-question">
+    <div class="q-text">3. What are the differences between a fish and a bird? How are they adapted to their habitats?</div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+</div>
+
+<div class="essay-question">
+    <div class="q-text">4. Describe the water cycle in your own words. What happens to water when it evaporates?</div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+</div>
+
+<div class="essay-question">
+    <div class="q-text">5. Why should we eat fruits and vegetables every day? Name three vitamins and what they do.</div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+    <div class="answer-lines"></div>
+</div>
+
+<!-- SECTION C: MATH PROBLEMS -->
+<div class="section-title">Section C: Science & Math Problems</div>
+<div class="instruction">Solve each problem and show your working clearly. (6 marks each = 30 marks)</div>
+
+<div class="math-problem">
+    <div class="title">1. Plant Growth:</div>
+    <div class="info">Riya planted a bean seed. In the first week, it grew <b>3 cm</b>. In the second week, it grew <b>5 cm</b>. In the third week, it grew <b>4 cm</b>.</div>
+    <div class="sub-questions">
+        (a) How tall is the plant after 3 weeks?<br>
+        (b) If the plant continues to grow 4 cm every week, how tall will it be after 5 weeks in total?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">2. Animal Legs:</div>
+    <div class="info">On a farm, there are <b>8 hens</b> and <b>6 cows</b>. A hen has 2 legs and a cow has 4 legs.</div>
+    <div class="sub-questions">
+        (a) How many hen legs are there in total?<br>
+        (b) How many cow legs are there in total?<br>
+        (c) How many legs are there altogether on the farm?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">3. Water Consumption:</div>
+    <div class="info">A family uses <b>15 litres</b> of water for drinking, <b>45 litres</b> for cooking, and <b>90 litres</b> for bathing every day.</div>
+    <div class="sub-questions">
+        (a) How many litres of water does the family use in one day?<br>
+        (b) How many litres do they use in one week (7 days)?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">4. Heartbeat:</div>
+    <div class="info">A healthy child's heart beats about <b>90 times</b> in one minute. A resting adult's heart beats <b>70 times</b> per minute.</div>
+    <div class="sub-questions">
+        (a) How many times does a child's heart beat in 5 minutes?<br>
+        (b) How many times does it beat in 10 minutes?<br>
+        (c) How many more times does a child's heart beat than an adult's in 1 minute?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<div class="math-problem">
+    <div class="title">5. Shadows:</div>
+    <div class="info">Arjun measured his shadow at different times: At 9 AM it was <b>180 cm</b>, at 12 PM (noon) it was <b>45 cm</b>, and at 3 PM it was <b>120 cm</b>.</div>
+    <div class="sub-questions">
+        (a) What is the difference between the longest and shortest shadow?<br>
+        (b) At what time was the shadow shortest? Why do you think this happened?
+    </div>
+    <div class="working-label">Working:</div>
+    <div class="working-space"></div>
+</div>
+
+<!-- ANSWER KEY - NEW PAGE -->
+<div class="page-break"></div>
+
+<h2 class="answer-key-header">📝 ANSWER KEY</h2>
+<div class="answer-key-subtitle">For Teacher / Parent Use Only</div>
+<hr class="divider">
+
+<div class="answer-section">Section A: Multiple Choice Answers</div>
+<div class="answer-item"><b>1. (c) Leaf</b> — Leaves contain chlorophyll and perform photosynthesis.</div>
+<div class="answer-item"><b>2. (b) Herbivores</b> — Examples: cow, deer, rabbit, elephant.</div>
+<div class="answer-item"><b>3. (d) Energy</b> — The three states of matter are solid, liquid, and gas.</div>
+<div class="answer-item"><b>4. (c) 206</b> — Babies have ~300 bones that fuse as they grow.</div>
+<div class="answer-item"><b>5. (c) Carbon Dioxide</b> — Plants absorb CO₂ and release oxygen.</div>
+
+<div class="answer-section">Section B: Short Answer Guidelines</div>
+<div class="answer-item"><b>1. Water:</b> Essential for survival. Plants use it for photosynthesis and nutrient transport. Animals need it for digestion, temperature regulation, and waste removal.</div>
+<div class="answer-item"><b>2. Germination:</b> Seeds need water, warmth, and air. The seed coat softens, a root grows down, and a shoot grows up toward light.</div>
+<div class="answer-item"><b>3. Fish vs Bird:</b> Fish: water, gills, scales/fins, cold-blooded. Birds: land/air, lungs, feathers/wings, warm-blooded.</div>
+<div class="answer-item"><b>4. Water Cycle:</b> Sun heats water → evaporates → rises as vapor → cools into clouds → falls as rain/snow → cycle repeats.</div>
+<div class="answer-item"><b>5. Nutrition:</b> Vitamin A (carrots): eye health. Vitamin C (oranges): healing/immunity. Vitamin K (spinach): blood clotting.</div>
+
+<div class="answer-section">Section C: Math Solutions</div>
+<div class="answer-item"><b>1. Plant Growth:</b> (a) 3+5+4 = <b>12 cm</b> (b) 12+4+4 = <b>20 cm</b></div>
+<div class="answer-item"><b>2. Animal Legs:</b> (a) 8×2 = <b>16 legs</b> (b) 6×4 = <b>24 legs</b> (c) 16+24 = <b>40 legs</b></div>
+<div class="answer-item"><b>3. Water:</b> (a) 15+45+90 = <b>150 L</b> (b) 150×7 = <b>1,050 L</b></div>
+<div class="answer-item"><b>4. Heartbeat:</b> (a) 90×5 = <b>450 beats</b> (b) 90×10 = <b>900 beats</b> (c) 90−70 = <b>20 more</b></div>
+<div class="answer-item"><b>5. Shadows:</b> (a) 180−45 = <b>135 cm</b> (b) <b>Noon</b> — sun is directly overhead, casting shortest shadow.</div>
+
+<div class="footer">Based on ICSE Grade 3 Science Syllabus | Total Marks: 50</div>
+
+</body>
+</html>
