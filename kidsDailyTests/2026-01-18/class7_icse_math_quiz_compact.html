@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 7 ICSE Mathematics Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.3;
+            color: #000;
+            background: #fff;
+            padding: 10px 15px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .header h1 {
+            font-size: 16pt;
+            margin-bottom: 2px;
+        }
+        
+        .meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 9pt;
+        }
+        
+        .student-info {
+            border: 1px solid #000;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 20px;
+            font-size: 9pt;
+        }
+        
+        .student-info .line {
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            width: 100px;
+            margin-left: 5px;
+        }
+        
+        .section-title {
+            background: #e8f4e8;
+            padding: 4px 8px;
+            font-size: 11pt;
+            font-weight: bold;
+            border: 1px solid #000;
+            margin: 10px 0 8px;
+        }
+        
+        .question {
+            margin-bottom: 8px;
+            page-break-inside: avoid;
+        }
+        
+        .q-num {
+            font-weight: bold;
+            display: inline;
+        }
+        
+        .q-text {
+            display: inline;
+        }
+        
+        .math-exp {
+            font-family: 'Times New Roman', serif;
+            font-size: 11pt;
+            text-align: center;
+            margin: 5px 0;
+            padding: 5px;
+            background: #f5f5f5;
+        }
+        
+        .sub-q {
+            margin-left: 15px;
+            font-size: 9pt;
+        }
+        
+        .sub-q li {
+            margin-bottom: 1px;
+        }
+        
+        .ans-box {
+            border: 1px dashed #aaa;
+            min-height: 50px;
+            margin: 5px 0;
+        }
+        
+        .ans-box.med { min-height: 70px; }
+        .ans-box.lg { min-height: 90px; }
+        
+        .mcq-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 3px 0 3px 15px;
+            font-size: 9pt;
+        }
+        
+        .mcq-row span::before {
+            content: "○ ";
+        }
+        
+        .diagram {
+            font-family: 'Courier New', monospace;
+            font-size: 8pt;
+            background: #f5f5f5;
+            padding: 5px;
+            margin: 5px 0;
+            white-space: pre;
+        }
+        
+        .data-tbl {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 5px 0;
+            font-size: 9pt;
+        }
+        
+        .data-tbl th, .data-tbl td {
+            border: 1px solid #000;
+            padding: 3px 5px;
+            text-align: center;
+        }
+        
+        .data-tbl th { background: #eee; }
+        
+        .page-break { page-break-before: always; }
+        
+        /* ANSWER KEY */
+        .answer-key { border-top: 2px solid #000; padding-top: 10px; margin-top: 15px; }
+        .answer-key h2 { text-align: center; font-size: 14pt; margin-bottom: 10px; }
+        .answer-key h3 { font-size: 10pt; border-bottom: 1px solid #228b22; margin: 10px 0 5px; padding-bottom: 2px; }
+        
+        .ans {
+            margin-bottom: 8px;
+            padding: 5px;
+            background: #f8fff8;
+            border-left: 2px solid #228b22;
+            font-size: 9pt;
+        }
+        
+        .ans-title { font-weight: bold; margin-bottom: 3px; }
+        
+        .calc {
+            font-family: 'Courier New', monospace;
+            font-size: 8.5pt;
+            background: #fff;
+            padding: 4px;
+            margin: 3px 0;
+            line-height: 1.4;
+        }
+        
+        .final { font-weight: bold; color: #006600; background: #e8ffe8; padding: 1px 4px; }
+        
+        .mcq-ans { width: 100%; border-collapse: collapse; font-size: 9pt; margin: 5px 0; }
+        .mcq-ans td, .mcq-ans th { border: 1px solid #000; padding: 3px 5px; }
+        .mcq-ans th { background: #eee; }
+        .mcq-ans td:nth-child(1), .mcq-ans td:nth-child(2) { text-align: center; width: 50px; }
+        .mcq-ans td:nth-child(2) { font-weight: bold; }
+        
+        .sm-tbl { font-size: 8pt; }
+        .sm-tbl td, .sm-tbl th { padding: 2px 4px; }
+        
+        @media print {
+            body { padding: 5px 10px; }
+            .page-break { page-break-before: always; }
+            .question { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Class 7 ICSE Mathematics Quiz</h1>
+        <div class="meta-info">
+            <span><b>Date:</b> Jan 18, 2026</span>
+            <span><b>Questions:</b> 15</span>
+            <span><b>Marks:</b> 50</span>
+            <span><b>Time:</b> 45 min</span>
+        </div>
+    </div>
+    
+    <div class="student-info">
+        <div><b>Name:</b><span class="line"></span></div>
+        <div><b>Roll No:</b><span class="line"></span></div>
+        <div><b>Section:</b><span class="line"></span></div>
+    </div>
+    
+    <!-- SECTION A -->
+    <div class="section-title">SECTION A: Numerical Problems (5 × 4 = 20 Marks)</div>
+    
+    <div class="question">
+        <span class="q-num">Q1.</span> <span class="q-text">Simplify (show all steps):</span>
+        <div class="math-exp">−3/4 + 5/6 ÷ 2/3 − 1/2 × 4/5</div>
+        <div class="ans-box med"></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q2.</span> <span class="q-text">A shopkeeper buys a TV for ₹24,000 and marks it up by 25%. During a sale, he offers 10% discount on marked price. Find: (a) Marked price (b) Selling price after discount (c) Profit/loss %</span>
+        <div class="ans-box med"></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q3.</span> <span class="q-text">Rajan deposited ₹15,000 at 8% p.a. SI. After 2 years, he withdrew all and deposited in another bank at 10% p.a. SI. Find: (a) Amount after 2 years in first bank (b) Interest in second bank after 3 more years (c) Total interest over 5 years</span>
+        <div class="ans-box med"></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q4.</span> <span class="q-text">If x = 2, y = −3, z = 4, evaluate: <b>3x²y − 2y²z + 4xyz − x³ + y³</b></span><br>
+        <span style="margin-left:25px;">Also simplify: <b>(2x + 3y)(x − 2y) − (x + y)²</b></span>
+        <div class="ans-box med"></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q5.</span> <span class="q-text">A rectangular garden (40m × 30m) has a 2m wide path inside along boundary. Find: (a) Area of garden (b) Area of path (c) Cost of tiling path at ₹120/m²</span>
+        <div class="ans-box med"></div>
+    </div>
+    
+    <!-- SECTION B -->
+    <div class="section-title">SECTION B: Multiple Choice Questions (5 × 2 = 10 Marks)</div>
+    
+    <div class="question">
+        <span class="q-num">Q6.</span> The additive inverse of −7/9 is:
+        <div class="mcq-row"><span>(a) 9/7</span><span>(b) −9/7</span><span>(c) 7/9</span><span>(d) −7/9</span></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q7.</span> If (3x − 5)/4 = (x + 3)/2, then x =
+        <div class="mcq-row"><span>(a) 11</span><span>(b) 13</span><span>(c) 17</span><span>(d) 7</span></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q8.</span> Ratio of two numbers is 3:5. If each increases by 10, new ratio is 5:7. Smaller number is:
+        <div class="mcq-row"><span>(a) 12</span><span>(b) 15</span><span>(c) 18</span><span>(d) 20</span></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q9.</span> In △ABC, ∠A = 65°, ∠B = 75°. Exterior angle at C is:
+        <div class="mcq-row"><span>(a) 40°</span><span>(b) 140°</span><span>(c) 115°</span><span>(d) 180°</span></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q10.</span> Mean of 5 numbers is 18. If one is excluded, mean becomes 16. Excluded number is:
+        <div class="mcq-row"><span>(a) 24</span><span>(b) 26</span><span>(c) 28</span><span>(d) 30</span></div>
+    </div>
+    
+    <!-- SECTION C -->
+    <div class="section-title">SECTION C: Problem Solving (5 × 4 = 20 Marks)</div>
+    
+    <div class="question">
+        <span class="q-num">Q11.</span> <span class="q-text">Amit and father's ages are in ratio 2:5. After 10 years, ratio will be 1:2. (a) Form equations (b) Find present ages (c) How many years ago was father 4× Amit's age?</span>
+        <div class="ans-box lg"></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q12.</span> <span class="q-text">PQ ∥ RS, AB is transversal. ∠PAB = 65°, ∠ABS = 115°. Find: (a) ∠BAR (b) ∠RBA (c) Does AB bisect ∠PAR? (d) ∠ABR</span>
+        <div class="diagram">  P ←——A——→ Q          R ←——B——→ S
+           \                    /
+            \__________________/</div>
+        <div class="ans-box"></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q13.</span> <span class="q-text">Marks of 30 students:</span>
+        <table class="data-tbl">
+            <tr><th>Marks</th><td>0-10</td><td>10-20</td><td>20-30</td><td>30-40</td><td>40-50</td></tr>
+            <tr><th>Students</th><td>3</td><td>7</td><td>12</td><td>5</td><td>3</td></tr>
+        </table>
+        <span class="q-text">Find: (a) Modal class (b) Mean (direct method) (c) % students scoring ≥30</span>
+        <div class="ans-box med"></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q14.</span> <span class="q-text">A completes work in 12 days, B in 18 days. They work together for 4 days, then A leaves. (a) Fraction completed together (b) Days for B to finish remaining (c) Total time</span>
+        <div class="ans-box med"></div>
+    </div>
+    
+    <div class="question">
+        <span class="q-num">Q15.</span> <span class="q-text">Circular garden: radius 21m. Square pond inside with diagonal = radius. (π = 22/7) Find: (a) Area of circle (b) Side of square (c) Area excluding pond (d) Cost of grass at ₹15/m²</span>
+        <div class="ans-box lg"></div>
+    </div>
+    
+    <!-- ANSWER KEY -->
+    <div class="answer-key page-break">
+        <h2>ANSWER KEY</h2>
+        
+        <h3>Section A: Numerical Problems</h3>
+        
+        <div class="ans">
+            <div class="ans-title">A1. Rational Numbers (BODMAS):</div>
+            <div class="calc">
+Division: 5/6 ÷ 2/3 = 5/6 × 3/2 = 5/4
+Multiplication: 1/2 × 4/5 = 2/5
+= −3/4 + 5/4 − 2/5 = (−15 + 25 − 8)/20 = <span class="final">1/10</span></div>
+        </div>
+        
+        <div class="ans">
+            <div class="ans-title">A2. Profit, Loss & Discount:</div>
+            <div class="calc">
+CP = ₹24,000
+(a) MP = 24,000 + 25% = 24,000 + 6,000 = <span class="final">₹30,000</span>
+(b) SP = 30,000 − 10% = 30,000 − 3,000 = <span class="final">₹27,000</span>
+(c) Profit = 3,000 → Profit% = (3000/24000)×100 = <span class="final">12.5%</span></div>
+        </div>
+        
+        <div class="ans">
+            <div class="ans-title">A3. Simple Interest:</div>
+            <div class="calc">
+Bank 1: SI = (15000×8×2)/100 = ₹2,400 → (a) Amount = <span class="final">₹17,400</span>
+Bank 2: (b) SI = (17400×10×3)/100 = <span class="final">₹5,220</span>
+(c) Total Interest = 2,400 + 5,220 = <span class="final">₹7,620</span></div>
+        </div>
+        
+        <div class="ans">
+            <div class="ans-title">A4. Algebraic Expressions:</div>
+            <div class="calc">
+x=2, y=−3, z=4
+3x²y = −36, 2y²z = 72, 4xyz = −96, x³ = 8, y³ = −27
+= −36 − 72 − 96 − 8 − 27 = <span class="final">−239</span>
+Simplify: (2x+3y)(x−2y) − (x+y)² = 2x²−xy−6y² − x²−2xy−y² = <span class="final">x² − 3xy − 7y²</span></div>
+        </div>
+        
+        <div class="ans">
+            <div class="ans-title">A5. Mensuration:</div>
+            <div class="calc">
+(a) Garden area = 40×30 = <span class="final">1,200 m²</span>
+Inner = 36×26 = 936 m² → (b) Path = 1200−936 = <span class="final">264 m²</span>
+(c) Cost = 264 × 120 = <span class="final">₹31,680</span></div>
+        </div>
+        
+        <h3>Section B: MCQ Answers</h3>
+        <table class="mcq-ans">
+            <tr><th>Q</th><th>Ans</th><th>Solution</th></tr>
+            <tr><td>6</td><td>(c)</td><td>Additive inverse of −7/9 is 7/9</td></tr>
+            <tr><td>7</td><td>(a)</td><td>2(3x−5) = 4(x+3) → 6x−10 = 4x+12 → x = 11</td></tr>
+            <tr><td>8</td><td>(b)</td><td>3k, 5k → (3k+10)/(5k+10) = 5/7 → k=5, smaller = 15</td></tr>
+            <tr><td>9</td><td>(b)</td><td>Exterior ∠ = 65° + 75° = 140°</td></tr>
+            <tr><td>10</td><td>(b)</td><td>Sum of 5 = 90, Sum of 4 = 64, Excluded = 26</td></tr>
+        </table>
+        
+        <h3>Section C: Problem Solving</h3>
+        
+        <div class="ans">
+            <div class="ans-title">A11. Ages:</div>
+            <div class="calc">
+Let Amit = 2x, Father = 5x
+(2x+10)/(5x+10) = 1/2 → 4x+20 = 5x+10 → x = 10
+(b) <span class="final">Amit = 20 yrs, Father = 50 yrs</span>
+(c) 50−y = 4(20−y) → y = 10 → <span class="final">10 years ago</span></div>
+        </div>
+        
+        <div class="ans">
+            <div class="ans-title">A12. Geometry:</div>
+            <div class="calc">
+(a) ∠BAR = 180° − 65° = <span class="final">115°</span> (linear pair)
+(b) ∠RBA = 180° − 115° = <span class="final">65°</span> (linear pair)
+(c) AB does NOT bisect (65° ≠ 115°)
+(d) ∠ABR = <span class="final">65°</span></div>
+        </div>
+        
+        <div class="ans">
+            <div class="ans-title">A13. Data Handling:</div>
+            <table class="sm-tbl" style="width:100%; margin:3px 0;">
+                <tr><th>Marks</th><th>xᵢ</th><th>fᵢ</th><th>fᵢxᵢ</th></tr>
+                <tr><td>0-10</td><td>5</td><td>3</td><td>15</td></tr>
+                <tr><td>10-20</td><td>15</td><td>7</td><td>105</td></tr>
+                <tr><td>20-30</td><td>25</td><td>12</td><td>300</td></tr>
+                <tr><td>30-40</td><td>35</td><td>5</td><td>175</td></tr>
+                <tr><td>40-50</td><td>45</td><td>3</td><td>135</td></tr>
+                <tr><td><b>Total</b></td><td></td><td><b>30</b></td><td><b>730</b></td></tr>
+            </table>
+            <div class="calc">
+(a) Modal class = <span class="final">20-30</span> (freq 12)
+(b) Mean = 730/30 = <span class="final">24.33</span>
+(c) ≥30: (8/30)×100 = <span class="final">26.67%</span></div>
+        </div>
+        
+        <div class="ans">
+            <div class="ans-title">A14. Work Problem:</div>
+            <div class="calc">
+A: 1/12/day, B: 1/18/day, Together: 5/36/day
+(a) 4 days together = 4 × 5/36 = <span class="final">5/9</span>
+(b) Remaining = 4/9, B alone = (4/9)÷(1/18) = <span class="final">8 days</span>
+(c) Total = 4 + 8 = <span class="final">12 days</span></div>
+        </div>
+        
+        <div class="ans">
+            <div class="ans-title">A15. Composite Figures:</div>
+            <div class="calc">
+r = 21m, diagonal = 21m
+(a) Circle area = (22/7)×21×21 = <span class="final">1,386 m²</span>
+(b) Side² = 21²/2 = 220.5 → Side = <span class="final">14.85 m</span>
+(c) Area excl. pond = 1386 − 220.5 = <span class="final">1,165.5 m²</span>
+(d) Cost = 1165.5 × 15 = <span class="final">₹17,483</span></div>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px; font-size: 9pt; color: #666;">— End —</div>
+</body>
+</html>

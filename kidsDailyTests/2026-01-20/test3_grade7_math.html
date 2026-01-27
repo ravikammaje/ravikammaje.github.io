@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 3 - 7th Grade ICSE Mathematics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 20px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #1565c0;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            color: #1565c0;
+        }
+        .header p {
+            font-size: 12px;
+            color: #555;
+        }
+        .student-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            padding: 10px;
+            background: #e3f2fd;
+            border-radius: 5px;
+        }
+        .student-info span {
+            border-bottom: 1px solid #333;
+            min-width: 150px;
+            display: inline-block;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            background: #bbdefb;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            border-left: 4px solid #1565c0;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+        .question-number {
+            font-weight: bold;
+        }
+        .mcq-options {
+            margin-left: 25px;
+            margin-top: 8px;
+        }
+        .mcq-options label {
+            display: block;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .mcq-options input[type="radio"] {
+            margin-right: 8px;
+        }
+        .answer-space {
+            border: 1px dashed #64b5f6;
+            min-height: 80px;
+            margin-top: 10px;
+            padding: 10px;
+            background: #e8f4fc;
+        }
+        .answer-space.large {
+            min-height: 130px;
+        }
+        .answer-line {
+            border-bottom: 1px solid #999;
+            height: 30px;
+            margin-top: 10px;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        .answer-key {
+            margin-top: 40px;
+            border-top: 3px double #1565c0;
+            padding-top: 20px;
+        }
+        .answer-key h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #c62828;
+        }
+        .answer-item {
+            margin-bottom: 12px;
+            padding: 8px 10px;
+        }
+        .answer-item:nth-child(even) {
+            background: #f5f5f5;
+        }
+        .instructions {
+            background: #fff8e1;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        .instructions strong {
+            color: #d84315;
+        }
+        .math-expression {
+            font-family: 'Cambria Math', 'Times New Roman', serif;
+            font-size: 15px;
+        }
+        @media print {
+            body {
+                padding: 10px 30px;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 Mathematics Test</h1>
+        <p>Grade 7 | ICSE Curriculum | Test 3</p>
+        <p>Time: 30 minutes | Maximum Marks: 40</p>
+    </div>
+
+    <div class="student-info">
+        <div>Name: <span>&nbsp;</span></div>
+        <div>Date: <span>&nbsp;</span></div>
+        <div>Score: <span>&nbsp;</span>/40</div>
+    </div>
+
+    <div class="instructions">
+        <strong>Instructions:</strong> Read each question carefully. Show all working for full marks. 
+        Use the space provided for rough work and final answers. Simplify all answers where possible.
+    </div>
+
+    <!-- Section A: Multiple Choice Questions -->
+    <div class="section">
+        <div class="section-title">Section A: Multiple Choice Questions (5 × 2 = 10 marks)</div>
+        
+        <div class="question">
+            <p><span class="question-number">1.</span> What is the value of <span class="math-expression">(-3) × (-4) × (-2)</span>?</p>
+            <div class="mcq-options">
+                <label><input type="radio" name="q1"> a) 24</label>
+                <label><input type="radio" name="q1"> b) -24</label>
+                <label><input type="radio" name="q1"> c) 12</label>
+                <label><input type="radio" name="q1"> d) -12</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">2.</span> Simplify: <span class="math-expression">3x + 5y - 2x + 3y</span></p>
+            <div class="mcq-options">
+                <label><input type="radio" name="q2"> a) 5x + 8y</label>
+                <label><input type="radio" name="q2"> b) x + 8y</label>
+                <label><input type="radio" name="q2"> c) x + 2y</label>
+                <label><input type="radio" name="q2"> d) 5x + 2y</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">3.</span> If 25% of a number is 40, what is the number?</p>
+            <div class="mcq-options">
+                <label><input type="radio" name="q3"> a) 10</label>
+                <label><input type="radio" name="q3"> b) 100</label>
+                <label><input type="radio" name="q3"> c) 160</label>
+                <label><input type="radio" name="q3"> d) 1000</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">4.</span> The ratio of 45 minutes to 1 hour is:</p>
+            <div class="mcq-options">
+                <label><input type="radio" name="q4"> a) 45:1</label>
+                <label><input type="radio" name="q4"> b) 3:4</label>
+                <label><input type="radio" name="q4"> c) 4:3</label>
+                <label><input type="radio" name="q4"> d) 1:45</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">5.</span> The area of a triangle with base 12 cm and height 8 cm is:</p>
+            <div class="mcq-options">
+                <label><input type="radio" name="q5"> a) 96 cm²</label>
+                <label><input type="radio" name="q5"> b) 48 cm²</label>
+                <label><input type="radio" name="q5"> c) 20 cm²</label>
+                <label><input type="radio" name="q5"> d) 24 cm²</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Section B: Short Answer Questions -->
+    <div class="section">
+        <div class="section-title">Section B: Short Answer Questions (5 × 2 = 10 marks)</div>
+        
+        <div class="question">
+            <p><span class="question-number">6.</span> Find the value of x: <span class="math-expression">3x - 7 = 14</span></p>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">7.</span> Convert <span class="math-expression">3/5</span> into a decimal and a percentage.</p>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">8.</span> Find the LCM of 12 and 18.</p>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">9.</span> Evaluate: <span class="math-expression">(-15) + 8 - (-3) + (-6)</span></p>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">10.</span> Find the perimeter of a rectangle with length 15 cm and breadth 9 cm.</p>
+            <div class="answer-space"></div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Section C: Problem Solving -->
+    <div class="section">
+        <div class="section-title">Section C: Problem Solving (5 × 4 = 20 marks)</div>
+        
+        <div class="question">
+            <p><span class="question-number">11.</span> A shirt originally costs ₹800. During a sale, it is sold at a 15% discount. Find:</p>
+            <p style="margin-left: 20px;">a) The discount amount</p>
+            <p style="margin-left: 20px;">b) The sale price of the shirt</p>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">12.</span> Solve the equation and verify your answer: <span class="math-expression">2(x + 3) - 5 = 3x - 4</span></p>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">13.</span> The ages of three friends are in the ratio 3:4:5. If the sum of their ages is 60 years, find the age of each friend.</p>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <div class="question">
+            <p><span class="question-number">14.</span> A rectangular garden has length 25 m and breadth 16 m. Find:</p>
+            <p style="margin-left: 20px;">a) The area of the garden</p>
+            <p style="margin-left: 20px;">b) The cost of fencing it at ₹45 per metre</p>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">15.</span> Simplify the following algebraic expression: <span class="math-expression">4(2a - 3b) + 3(a + 2b) - 2(3a - b)</span></p>
+            <div class="answer-space large"></div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Answer Key -->
+    <div class="answer-key">
+        <h2>🔑 ANSWER KEY - Test 3: Grade 7 Mathematics</h2>
+        <p style="text-align: center; margin-bottom: 20px; color: #666;">(For parent/teacher use only)</p>
+        
+        <div class="section-title">Section A: Multiple Choice</div>
+        <div class="answer-item"><strong>1. b) -24</strong><br>Working: (-3) × (-4) = 12, then 12 × (-2) = -24 (odd number of negative signs gives negative result)</div>
+        <div class="answer-item"><strong>2. b) x + 8y</strong><br>Working: 3x - 2x = x and 5y + 3y = 8y, so answer is x + 8y</div>
+        <div class="answer-item"><strong>3. c) 160</strong><br>Working: 25% = 1/4, so if 1/4 of number = 40, then number = 40 × 4 = 160</div>
+        <div class="answer-item"><strong>4. b) 3:4</strong><br>Working: 1 hour = 60 minutes, so ratio = 45:60 = 3:4 (dividing both by 15)</div>
+        <div class="answer-item"><strong>5. b) 48 cm²</strong><br>Working: Area of triangle = ½ × base × height = ½ × 12 × 8 = 48 cm²</div>
+
+        <div class="section-title">Section B: Short Answers</div>
+        <div class="answer-item"><strong>6. x = 7</strong><br>Working: 3x - 7 = 14 → 3x = 14 + 7 → 3x = 21 → x = 7</div>
+        <div class="answer-item"><strong>7. Decimal: 0.6, Percentage: 60%</strong><br>Working: 3 ÷ 5 = 0.6; 0.6 × 100 = 60%</div>
+        <div class="answer-item"><strong>8. LCM = 36</strong><br>Working: 12 = 2² × 3; 18 = 2 × 3²; LCM = 2² × 3² = 4 × 9 = 36</div>
+        <div class="answer-item"><strong>9. -10</strong><br>Working: (-15) + 8 - (-3) + (-6) = -15 + 8 + 3 - 6 = -15 + 11 - 6 = -10</div>
+        <div class="answer-item"><strong>10. 48 cm</strong><br>Working: Perimeter = 2(l + b) = 2(15 + 9) = 2 × 24 = 48 cm</div>
+
+        <div class="section-title">Section C: Problem Solving</div>
+        <div class="answer-item">
+            <strong>11.</strong><br>
+            a) Discount = 15% of ₹800 = (15/100) × 800 = ₹120<br>
+            b) Sale price = Original price - Discount = 800 - 120 = ₹680
+        </div>
+        <div class="answer-item">
+            <strong>12. x = 5</strong><br>
+            Working:<br>
+            2(x + 3) - 5 = 3x - 4<br>
+            2x + 6 - 5 = 3x - 4<br>
+            2x + 1 = 3x - 4<br>
+            1 + 4 = 3x - 2x<br>
+            5 = x<br>
+            Verification: LHS = 2(5+3) - 5 = 16 - 5 = 11; RHS = 3(5) - 4 = 15 - 4 = 11 ✓
+        </div>
+        <div class="answer-item">
+            <strong>13.</strong><br>
+            Let the ages be 3x, 4x, and 5x<br>
+            3x + 4x + 5x = 60<br>
+            12x = 60<br>
+            x = 5<br>
+            Ages: 3×5 = 15 years, 4×5 = 20 years, 5×5 = 25 years
+        </div>
+        <div class="answer-item">
+            <strong>14.</strong><br>
+            a) Area = length × breadth = 25 × 16 = 400 m²<br>
+            b) Perimeter = 2(25 + 16) = 2 × 41 = 82 m<br>
+            Cost of fencing = 82 × 45 = ₹3,690
+        </div>
+        <div class="answer-item">
+            <strong>15. 5a - 4b</strong><br>
+            Working:<br>
+            4(2a - 3b) + 3(a + 2b) - 2(3a - b)<br>
+            = 8a - 12b + 3a + 6b - 6a + 2b<br>
+            = (8a + 3a - 6a) + (-12b + 6b + 2b)<br>
+            = 5a + (-4b)<br>
+            = 5a - 4b
+        </div>
+    </div>
+</body>
+</html>

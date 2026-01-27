@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 4 - 7th Grade ICSE Science</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+            line-height: 1.6;
+            padding: 20px 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #7b1fa2;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            color: #7b1fa2;
+        }
+        .header p {
+            font-size: 12px;
+            color: #555;
+        }
+        .student-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            padding: 10px;
+            background: #f3e5f5;
+            border-radius: 5px;
+        }
+        .student-info span {
+            border-bottom: 1px solid #333;
+            min-width: 150px;
+            display: inline-block;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            background: #e1bee7;
+            padding: 8px 12px;
+            margin-bottom: 15px;
+            border-left: 4px solid #7b1fa2;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+        .question-number {
+            font-weight: bold;
+        }
+        .mcq-options {
+            margin-left: 25px;
+            margin-top: 8px;
+        }
+        .mcq-options label {
+            display: block;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .mcq-options input[type="radio"] {
+            margin-right: 8px;
+        }
+        .answer-space {
+            border: 1px dashed #ba68c8;
+            min-height: 80px;
+            margin-top: 10px;
+            padding: 10px;
+            background: #faf5fb;
+        }
+        .answer-space.large {
+            min-height: 130px;
+        }
+        .answer-line {
+            border-bottom: 1px solid #999;
+            height: 30px;
+            margin-top: 10px;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+        .answer-key {
+            margin-top: 40px;
+            border-top: 3px double #7b1fa2;
+            padding-top: 20px;
+        }
+        .answer-key h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #c62828;
+        }
+        .answer-item {
+            margin-bottom: 12px;
+            padding: 8px 10px;
+        }
+        .answer-item:nth-child(even) {
+            background: #f5f5f5;
+        }
+        .instructions {
+            background: #fff8e1;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        .instructions strong {
+            color: #d84315;
+        }
+        .subsection {
+            font-weight: bold;
+            color: #1565c0;
+            margin: 15px 0 10px 0;
+            font-size: 13px;
+            padding: 5px;
+            background: #e3f2fd;
+            border-radius: 3px;
+        }
+        @media print {
+            body {
+                padding: 10px 30px;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔬 Science Test</h1>
+        <p>Grade 7 | ICSE Curriculum | Test 4</p>
+        <p>Time: 30 minutes | Maximum Marks: 40</p>
+    </div>
+
+    <div class="student-info">
+        <div>Name: <span>&nbsp;</span></div>
+        <div>Date: <span>&nbsp;</span></div>
+        <div>Score: <span>&nbsp;</span>/40</div>
+    </div>
+
+    <div class="instructions">
+        <strong>Instructions:</strong> Read each question carefully. Write complete sentences for long answers. 
+        Draw neat diagrams where required.
+    </div>
+
+    <!-- Section A: Multiple Choice Questions -->
+    <div class="section">
+        <div class="section-title">Section A: Multiple Choice Questions (5 × 2 = 10 marks)</div>
+        
+        <div class="question">
+            <p><span class="question-number">1.</span> Which of the following is the correct equation for photosynthesis?</p>
+            <div class="mcq-options">
+                <label><input type="radio" name="q1"> a) Carbon dioxide + Oxygen → Glucose + Water</label>
+                <label><input type="radio" name="q1"> b) Carbon dioxide + Water → Glucose + Oxygen</label>
+                <label><input type="radio" name="q1"> c) Glucose + Oxygen → Carbon dioxide + Water</label>
+                <label><input type="radio" name="q1"> d) Glucose + Water → Carbon dioxide + Oxygen</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">2.</span> The SI unit of temperature is:</p>
+            <div class="mcq-options">
+                <label><input type="radio" name="q2"> a) Celsius (°C)</label>
+                <label><input type="radio" name="q2"> b) Fahrenheit (°F)</label>
+                <label><input type="radio" name="q2"> c) Kelvin (K)</label>
+                <label><input type="radio" name="q2"> d) Joule (J)</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">3.</span> Which type of blood vessels carry blood away from the heart?</p>
+            <div class="mcq-options">
+                <label><input type="radio" name="q3"> a) Veins</label>
+                <label><input type="radio" name="q3"> b) Capillaries</label>
+                <label><input type="radio" name="q3"> c) Arteries</label>
+                <label><input type="radio" name="q3"> d) Lymph vessels</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">4.</span> When a substance changes directly from solid to gas without becoming liquid, it is called:</p>
+            <div class="mcq-options">
+                <label><input type="radio" name="q4"> a) Evaporation</label>
+                <label><input type="radio" name="q4"> b) Condensation</label>
+                <label><input type="radio" name="q4"> c) Sublimation</label>
+                <label><input type="radio" name="q4"> d) Melting</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">5.</span> Which of the following is NOT a renewable source of energy?</p>
+            <div class="mcq-options">
+                <label><input type="radio" name="q5"> a) Solar energy</label>
+                <label><input type="radio" name="q5"> b) Wind energy</label>
+                <label><input type="radio" name="q5"> c) Coal</label>
+                <label><input type="radio" name="q5"> d) Hydroelectric energy</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Section B: Short Answer Questions -->
+    <div class="section">
+        <div class="section-title">Section B: Short Answer Questions (5 × 2 = 10 marks)</div>
+        
+        <div class="question">
+            <p><span class="question-number">6.</span> Define "element" and give two examples.</p>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">7.</span> What is the function of stomata in leaves?</p>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">8.</span> State the law of reflection of light.</p>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">9.</span> What is the difference between physical change and chemical change? Give one example of each.</p>
+            <div class="answer-space"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">10.</span> Name the three types of muscles found in the human body.</p>
+            <div class="answer-space"></div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Section C: Long Answer Questions -->
+    <div class="section">
+        <div class="section-title">Section C: Long Answer Questions (5 × 4 = 20 marks)</div>
+        
+        <div class="question">
+            <p><span class="question-number">11.</span> Explain the process of respiration in humans. Include:</p>
+            <p style="margin-left: 20px;">a) The organs involved</p>
+            <p style="margin-left: 20px;">b) What happens during inhalation and exhalation</p>
+            <p style="margin-left: 20px;">c) The exchange of gases</p>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">12.</span> Describe the structure of an atom. Include the three subatomic particles, their charges, and their locations within the atom.</p>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">13.</span> What is an ecosystem? Explain the terms "producer," "consumer," and "decomposer" with examples.</p>
+            <div class="answer-space large"></div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <div class="question">
+            <p><span class="question-number">14.</span> Explain the water cycle. Draw a simple diagram and label the main processes involved (evaporation, condensation, precipitation, collection).</p>
+            <div class="answer-space large" style="min-height: 180px;"></div>
+        </div>
+
+        <div class="question">
+            <p><span class="question-number">15.</span> A metal spoon gets hot quickly when placed in hot water, but a wooden spoon does not. Explain why this happens using the concept of heat transfer and conductors/insulators.</p>
+            <div class="answer-space large"></div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Answer Key -->
+    <div class="answer-key">
+        <h2>🔑 ANSWER KEY - Test 4: Grade 7 Science</h2>
+        <p style="text-align: center; margin-bottom: 20px; color: #666;">(For parent/teacher use only)</p>
+        
+        <div class="section-title">Section A: Multiple Choice</div>
+        <div class="answer-item"><strong>1. b) Carbon dioxide + Water → Glucose + Oxygen</strong><br>
+        6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ (in presence of sunlight and chlorophyll)</div>
+        <div class="answer-item"><strong>2. c) Kelvin (K)</strong><br>
+        Kelvin is the SI unit; Celsius and Fahrenheit are commonly used but not SI units</div>
+        <div class="answer-item"><strong>3. c) Arteries</strong><br>
+        Arteries carry oxygenated blood away from heart (except pulmonary artery); veins carry blood towards heart</div>
+        <div class="answer-item"><strong>4. c) Sublimation</strong><br>
+        Example: dry ice (solid CO₂) turning directly to gas, naphthalene balls, camphor</div>
+        <div class="answer-item"><strong>5. c) Coal</strong><br>
+        Coal is a fossil fuel (non-renewable); solar, wind, and hydroelectric are renewable sources</div>
+
+        <div class="section-title">Section B: Short Answers</div>
+        <div class="answer-item"><strong>6.</strong> An element is a pure substance made up of only one type of atom that cannot be broken down into simpler substances by chemical means.<br>
+        Examples: Oxygen (O), Gold (Au), Iron (Fe), Carbon (C), Hydrogen (H)</div>
+        <div class="answer-item"><strong>7.</strong> Stomata are tiny pores on leaves that:<br>
+        • Allow exchange of gases (CO₂ in, O₂ out during photosynthesis)<br>
+        • Release water vapor during transpiration<br>
+        • Control the opening and closing to regulate water loss</div>
+        <div class="answer-item"><strong>8.</strong> The Law of Reflection states:<br>
+        • The angle of incidence equals the angle of reflection<br>
+        • The incident ray, reflected ray, and normal all lie in the same plane</div>
+        <div class="answer-item"><strong>9.</strong><br>
+        • Physical change: A change where no new substance is formed; it is usually reversible. Example: melting of ice, dissolving sugar in water<br>
+        • Chemical change: A change where new substances with different properties are formed; usually irreversible. Example: burning paper, rusting of iron</div>
+        <div class="answer-item"><strong>10.</strong> The three types of muscles are:<br>
+        1. Skeletal muscles (voluntary, attached to bones)<br>
+        2. Smooth muscles (involuntary, found in internal organs)<br>
+        3. Cardiac muscles (involuntary, found only in the heart)</div>
+
+        <div class="section-title">Section C: Long Answers</div>
+        <div class="answer-item">
+            <strong>11. Respiration in Humans:</strong><br>
+            <strong>a) Organs involved:</strong> Nose, pharynx, larynx, trachea (windpipe), bronchi, lungs, diaphragm<br>
+            <strong>b) Inhalation:</strong> Diaphragm contracts and moves down, rib cage expands, air pressure decreases in lungs, air rushes in<br>
+            <strong>Exhalation:</strong> Diaphragm relaxes and moves up, rib cage contracts, air pressure increases, air is pushed out<br>
+            <strong>c) Gas exchange:</strong> Occurs in alveoli (air sacs) in lungs; oxygen diffuses into blood, carbon dioxide diffuses from blood into alveoli to be exhaled
+        </div>
+        <div class="answer-item">
+            <strong>12. Structure of an Atom:</strong><br>
+            • <strong>Protons:</strong> Positive charge (+1), located in the nucleus, mass ≈ 1 amu<br>
+            • <strong>Neutrons:</strong> No charge (neutral), located in the nucleus, mass ≈ 1 amu<br>
+            • <strong>Electrons:</strong> Negative charge (-1), orbit around the nucleus in shells/energy levels, mass ≈ negligible<br>
+            The nucleus (containing protons and neutrons) is at the center. Electrons orbit in shells around the nucleus. The number of protons equals number of electrons in a neutral atom.
+        </div>
+        <div class="answer-item">
+            <strong>13. Ecosystem:</strong><br>
+            An ecosystem is a community of living organisms (biotic) interacting with each other and their non-living environment (abiotic factors like water, air, soil, sunlight).<br>
+            • <strong>Producer:</strong> Organisms that make their own food through photosynthesis. Examples: plants, algae, phytoplankton<br>
+            • <strong>Consumer:</strong> Organisms that cannot make their own food and eat other organisms. Examples: herbivores (deer, rabbit), carnivores (lion, eagle), omnivores (bear, humans)<br>
+            • <strong>Decomposer:</strong> Organisms that break down dead organic matter and return nutrients to soil. Examples: bacteria, fungi, earthworms
+        </div>
+        <div class="answer-item">
+            <strong>14. Water Cycle:</strong><br>
+            The continuous movement of water on, above, and below Earth's surface.<br>
+            • <strong>Evaporation:</strong> Sun heats water in oceans/lakes/rivers, turning it into water vapor that rises<br>
+            • <strong>Condensation:</strong> Water vapor cools in the atmosphere and forms clouds (tiny water droplets)<br>
+            • <strong>Precipitation:</strong> Water falls back to Earth as rain, snow, sleet, or hail<br>
+            • <strong>Collection:</strong> Water collects in oceans, lakes, rivers, or seeps into ground (groundwater)<br>
+            <em>Diagram should show: sun, ocean/water body, clouds, arrows showing evaporation going up, precipitation coming down, water flowing back to ocean</em>
+        </div>
+        <div class="answer-item">
+            <strong>15. Heat Transfer - Conductors and Insulators:</strong><br>
+            • <strong>Metal spoon:</strong> Metals are good conductors of heat. They have free electrons that can move and transfer thermal energy quickly from particle to particle. Heat from hot water transfers rapidly through the metal to your hand.<br>
+            • <strong>Wooden spoon:</strong> Wood is a poor conductor (insulator). It does not have free electrons, so heat transfer is very slow. The particles in wood do not easily pass thermal energy along.<br>
+            • <strong>Conclusion:</strong> Materials differ in their ability to conduct heat. Conductors (metals) transfer heat quickly; insulators (wood, plastic, rubber) transfer heat slowly, which is why they feel cooler to touch.
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 7 ICSE Science Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 12pt;
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+            padding: 20px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 22pt;
+            margin-bottom: 5px;
+        }
+        
+        .header .subtitle {
+            font-size: 12pt;
+            color: #444;
+            margin-bottom: 10px;
+        }
+        
+        .meta-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 11pt;
+            margin-top: 10px;
+        }
+        
+        .meta-info span {
+            margin: 3px 10px;
+        }
+        
+        .student-info {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .student-info div {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .student-info label {
+            font-weight: bold;
+        }
+        
+        .student-info .line {
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            width: 150px;
+            margin-left: 10px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            background: #f0f0f0;
+            padding: 8px 12px;
+            font-size: 14pt;
+            font-weight: bold;
+            border: 1px solid #000;
+            margin-bottom: 15px;
+        }
+        
+        .question {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .question-number {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .question-text {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+        
+        .sub-questions {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        
+        .sub-questions li {
+            margin-bottom: 5px;
+        }
+        
+        .answer-space {
+            border: 1px dashed #ccc;
+            min-height: 80px;
+            margin-top: 10px;
+            padding: 5px;
+        }
+        
+        .answer-space.large {
+            min-height: 120px;
+        }
+        
+        .answer-space.extra-large {
+            min-height: 180px;
+        }
+        
+        .mcq-options {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .mcq-options li {
+            list-style: none;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .mcq-options li::before {
+            content: "○";
+            margin-right: 10px;
+            font-size: 14pt;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        /* Answer Key Styles */
+        .answer-key {
+            border-top: 3px double #000;
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+        
+        .answer-key h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18pt;
+        }
+        
+        .answer {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-left: 3px solid #333;
+        }
+        
+        .answer-number {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .calculation {
+            font-family: 'Courier New', monospace;
+            background: #fff;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+        }
+        
+        .final-answer {
+            font-weight: bold;
+            color: #006600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 11pt;
+        }
+        
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background: #f0f0f0;
+            font-weight: bold;
+        }
+        
+        .mcq-answer-table td:first-child {
+            width: 80px;
+            text-align: center;
+        }
+        
+        .mcq-answer-table td:nth-child(2) {
+            width: 80px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            
+            .page-break {
+                page-break-before: always;
+            }
+            
+            .question {
+                page-break-inside: avoid;
+            }
+            
+            .answer-key {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- QUESTION PAPER -->
+    <div class="header">
+        <h1>Class 7 ICSE Science Quiz</h1>
+        <div class="subtitle">Based on ICSE Syllabus | Difficulty: Medium-Hard</div>
+        <div class="meta-info">
+            <span><strong>Date:</strong> January 18, 2026</span>
+            <span><strong>Total Questions:</strong> 15</span>
+            <span><strong>Total Marks:</strong> 50</span>
+            <span><strong>Time:</strong> 45 minutes</span>
+        </div>
+    </div>
+    
+    <div class="student-info">
+        <div><label>Name:</label><span class="line"></span></div>
+        <div><label>Roll No:</label><span class="line"></span></div>
+        <div><label>Section:</label><span class="line"></span></div>
+    </div>
+    
+    <!-- SECTION A -->
+    <div class="section">
+        <div class="section-title">SECTION A: Numerical Problems (5 × 4 = 20 Marks)</div>
+        
+        <div class="question">
+            <div class="question-number">Q1.</div>
+            <div class="question-text">
+                A substance has a mass of 450 g and occupies a volume of 50 cm³. Calculate:
+            </div>
+            <ul class="sub-questions">
+                <li>(a) The density of the substance in g/cm³</li>
+                <li>(b) The density in kg/m³</li>
+                <li>(c) Will this substance float or sink in water? (Density of water = 1 g/cm³)</li>
+            </ul>
+            <div class="answer-space large"></div>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q2.</div>
+            <div class="question-text">
+                The heart of a person beats 72 times per minute. Calculate:
+            </div>
+            <ul class="sub-questions">
+                <li>(a) How many times does the heart beat in one hour?</li>
+                <li>(b) How many times does it beat in a day?</li>
+                <li>(c) If the heart pumps 70 mL of blood per beat, how much blood (in litres) is pumped in one minute?</li>
+            </ul>
+            <div class="answer-space large"></div>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q3.</div>
+            <div class="question-text">
+                A concave mirror has a focal length of 15 cm. An object is placed 30 cm from the mirror. Using the mirror formula (1/f = 1/v + 1/u), calculate:
+            </div>
+            <ul class="sub-questions">
+                <li>(a) The image distance (v)</li>
+                <li>(b) The magnification (m = -v/u)</li>
+                <li>(c) State whether the image is real or virtual</li>
+            </ul>
+            <div class="answer-space large"></div>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q4.</div>
+            <div class="question-text">
+                In a food chain: <strong>Grass → Grasshopper → Frog → Snake → Hawk</strong>
+            </div>
+            <ul class="sub-questions">
+                <li>If the grass produces 10,000 J of energy, calculate the energy available at each trophic level using the 10% rule.</li>
+                <li>How much energy is available to the hawk?</li>
+            </ul>
+            <div class="answer-space large"></div>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q5.</div>
+            <div class="question-text">
+                A solution contains 25 g of salt dissolved in 475 g of water. Calculate:
+            </div>
+            <ul class="sub-questions">
+                <li>(a) The total mass of the solution</li>
+                <li>(b) The concentration of the solution in percentage (mass by mass)</li>
+                <li>(c) If 100 g of water evaporates, what is the new concentration?</li>
+            </ul>
+            <div class="answer-space large"></div>
+        </div>
+    </div>
+    
+    <!-- SECTION B -->
+    <div class="section page-break">
+        <div class="section-title">SECTION B: Multiple Choice Questions (5 × 2 = 10 Marks)</div>
+        <p style="margin-bottom: 15px; font-style: italic;">Choose the correct option for each question.</p>
+        
+        <div class="question">
+            <div class="question-number">Q6.</div>
+            <div class="question-text">Which organelle is known as the "powerhouse of the cell"?</div>
+            <ul class="mcq-options">
+                <li>(a) Nucleus</li>
+                <li>(b) Ribosome</li>
+                <li>(c) Mitochondria</li>
+                <li>(d) Golgi apparatus</li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q7.</div>
+            <div class="question-text">When a ray of light passes from a denser medium to a rarer medium, it:</div>
+            <ul class="mcq-options">
+                <li>(a) Bends towards the normal</li>
+                <li>(b) Bends away from the normal</li>
+                <li>(c) Does not bend at all</li>
+                <li>(d) Reflects back completely</li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q8.</div>
+            <div class="question-text">Which of the following is NOT a greenhouse gas?</div>
+            <ul class="mcq-options">
+                <li>(a) Carbon dioxide</li>
+                <li>(b) Methane</li>
+                <li>(c) Nitrogen</li>
+                <li>(d) Water vapour</li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q9.</div>
+            <div class="question-text">The pH of human blood is approximately:</div>
+            <ul class="mcq-options">
+                <li>(a) 5.4 (acidic)</li>
+                <li>(b) 7.0 (neutral)</li>
+                <li>(c) 7.4 (slightly alkaline)</li>
+                <li>(d) 9.0 (strongly alkaline)</li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q10.</div>
+            <div class="question-text">Which type of reproduction involves only one parent?</div>
+            <ul class="mcq-options">
+                <li>(a) Sexual reproduction</li>
+                <li>(b) Cross-pollination</li>
+                <li>(c) Asexual reproduction</li>
+                <li>(d) Fertilization</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- SECTION C -->
+    <div class="section page-break">
+        <div class="section-title">SECTION C: Descriptive Questions (5 × 4 = 20 Marks)</div>
+        
+        <div class="question">
+            <div class="question-number">Q11.</div>
+            <div class="question-text">
+                Explain the structure of an animal cell with a well-labelled diagram. How does an animal cell differ from a plant cell? (Give at least 4 differences)
+            </div>
+            <div class="answer-space extra-large"></div>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q12.</div>
+            <div class="question-text">
+                What is an alloy? Explain why alloys are preferred over pure metals in many applications. Give three examples of alloys along with their composition and uses.
+            </div>
+            <div class="answer-space extra-large"></div>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q13.</div>
+            <div class="question-text">
+                Describe the process of respiration in humans. Differentiate between aerobic and anaerobic respiration. Why do we feel muscle cramps after vigorous exercise?
+            </div>
+            <div class="answer-space extra-large"></div>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q14.</div>
+            <div class="question-text">
+                Explain the terms: reflection, refraction, and total internal reflection. Under what conditions does total internal reflection occur? Give two applications of total internal reflection.
+            </div>
+            <div class="answer-space extra-large"></div>
+        </div>
+        
+        <div class="question">
+            <div class="question-number">Q15.</div>
+            <div class="question-text">
+                What is soil erosion? Explain the causes of soil erosion and methods to prevent it. Why is soil conservation important for sustainable agriculture?
+            </div>
+            <div class="answer-space extra-large"></div>
+        </div>
+    </div>
+    
+    <!-- ANSWER KEY -->
+    <div class="answer-key page-break">
+        <h2>📝 ANSWER KEY</h2>
+        
+        <h3 style="margin: 20px 0 15px; border-bottom: 1px solid #000; padding-bottom: 5px;">Section A: Numerical Problems</h3>
+        
+        <div class="answer">
+            <div class="answer-number">A1. Density Calculation:</div>
+            <div class="calculation">
+                (a) Density = Mass / Volume = 450 g / 50 cm³ = <span class="final-answer">9 g/cm³</span><br>
+                (b) Density in kg/m³ = 9 × 1000 = <span class="final-answer">9000 kg/m³</span><br>
+                (c) Since density (9 g/cm³) > density of water (1 g/cm³), the substance will <span class="final-answer">SINK</span>
+            </div>
+        </div>
+        
+        <div class="answer">
+            <div class="answer-number">A2. Heart Rate Calculation:</div>
+            <div class="calculation">
+                (a) Beats per hour = 72 × 60 = <span class="final-answer">4,320 beats</span><br>
+                (b) Beats per day = 4,320 × 24 = <span class="final-answer">103,680 beats</span><br>
+                (c) Blood per minute = 72 × 70 mL = 5040 mL = <span class="final-answer">5.04 litres</span>
+            </div>
+        </div>
+        
+        <div class="answer">
+            <div class="answer-number">A3. Mirror Formula:</div>
+            <div class="calculation">
+                Given: f = 15 cm, u = -30 cm (object distance is negative)<br>
+                (a) 1/v = 1/f - 1/u = 1/15 - 1/(-30) = 1/15 + 1/30 = 3/30 = 1/10<br>
+                    Therefore, v = <span class="final-answer">-30 cm</span><br>
+                (b) Magnification m = -v/u = -(-30)/(-30) = <span class="final-answer">-1</span> (inverted, same size)<br>
+                (c) Image is <span class="final-answer">Real and Inverted</span>
+            </div>
+        </div>
+        
+        <div class="answer">
+            <div class="answer-number">A4. Energy Flow (10% Rule):</div>
+            <table>
+                <tr>
+                    <th>Trophic Level</th>
+                    <th>Organism</th>
+                    <th>Energy (J)</th>
+                </tr>
+                <tr><td>1st (Producer)</td><td>Grass</td><td>10,000</td></tr>
+                <tr><td>2nd (Primary Consumer)</td><td>Grasshopper</td><td>1,000</td></tr>
+                <tr><td>3rd (Secondary Consumer)</td><td>Frog</td><td>100</td></tr>
+                <tr><td>4th (Tertiary Consumer)</td><td>Snake</td><td>10</td></tr>
+                <tr><td>5th (Quaternary Consumer)</td><td>Hawk</td><td class="final-answer">1 J</td></tr>
+            </table>
+        </div>
+        
+        <div class="answer">
+            <div class="answer-number">A5. Solution Concentration:</div>
+            <div class="calculation">
+                (a) Total mass = 25 g + 475 g = <span class="final-answer">500 g</span><br>
+                (b) Concentration = (25/500) × 100 = <span class="final-answer">5%</span><br>
+                (c) New mass of water = 475 - 100 = 375 g<br>
+                    New total mass = 25 + 375 = 400 g<br>
+                    New concentration = (25/400) × 100 = <span class="final-answer">6.25%</span>
+            </div>
+        </div>
+        
+        <h3 style="margin: 25px 0 15px; border-bottom: 1px solid #000; padding-bottom: 5px;">Section B: MCQ Answers</h3>
+        
+        <table class="mcq-answer-table">
+            <tr>
+                <th>Question</th>
+                <th>Answer</th>
+                <th>Explanation</th>
+            </tr>
+            <tr>
+                <td>Q6</td>
+                <td>(c)</td>
+                <td>Mitochondria produce ATP through cellular respiration</td>
+            </tr>
+            <tr>
+                <td>Q7</td>
+                <td>(b)</td>
+                <td>Light speeds up in rarer medium, bending away from normal</td>
+            </tr>
+            <tr>
+                <td>Q8</td>
+                <td>(c)</td>
+                <td>N₂ is not a greenhouse gas; it doesn't absorb infrared radiation</td>
+            </tr>
+            <tr>
+                <td>Q9</td>
+                <td>(c)</td>
+                <td>Blood maintains pH 7.35-7.45 for proper enzyme function</td>
+            </tr>
+            <tr>
+                <td>Q10</td>
+                <td>(c)</td>
+                <td>Binary fission, budding, vegetative propagation involve one parent</td>
+            </tr>
+        </table>
+        
+        <h3 style="margin: 25px 0 15px; border-bottom: 1px solid #000; padding-bottom: 5px;">Section C: Descriptive Answers (Key Points)</h3>
+        
+        <div class="answer">
+            <div class="answer-number">A11. Animal Cell Structure:</div>
+            <p><strong>Components:</strong> Cell membrane, cytoplasm, nucleus, mitochondria, ribosomes, ER, Golgi body, lysosomes</p>
+            <p><strong>Differences from Plant Cell:</strong></p>
+            <table>
+                <tr><th>Animal Cell</th><th>Plant Cell</th></tr>
+                <tr><td>No cell wall</td><td>Has cell wall (cellulose)</td></tr>
+                <tr><td>No chloroplasts</td><td>Has chloroplasts</td></tr>
+                <tr><td>Small/no vacuoles</td><td>Large central vacuole</td></tr>
+                <tr><td>Centrioles present</td><td>Centrioles absent (usually)</td></tr>
+                <tr><td>Irregular shape</td><td>Fixed rectangular shape</td></tr>
+            </table>
+        </div>
+        
+        <div class="answer">
+            <div class="answer-number">A12. Alloys:</div>
+            <p><strong>Definition:</strong> Homogeneous mixture of two or more metals, or metal with non-metal</p>
+            <p><strong>Advantages:</strong> Greater strength, corrosion resistance, better properties than pure metals</p>
+            <table>
+                <tr><th>Alloy</th><th>Composition</th><th>Uses</th></tr>
+                <tr><td>Brass</td><td>Copper + Zinc</td><td>Musical instruments, decorative items</td></tr>
+                <tr><td>Bronze</td><td>Copper + Tin</td><td>Statues, medals, bearings</td></tr>
+                <tr><td>Stainless Steel</td><td>Iron + Chromium + Nickel + Carbon</td><td>Utensils, surgical instruments</td></tr>
+            </table>
+        </div>
+        
+        <div class="answer">
+            <div class="answer-number">A13. Respiration:</div>
+            <p><strong>Process:</strong> Inhalation → Gas exchange in alveoli → Cellular respiration → Exhalation</p>
+            <p><strong>Aerobic:</strong> Uses oxygen, produces 38 ATP, in mitochondria<br>
+            C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + Energy</p>
+            <p><strong>Anaerobic:</strong> No oxygen, produces 2 ATP, in cytoplasm<br>
+            C₆H₁₂O₆ → Lactic acid + Energy</p>
+            <p><strong>Muscle cramps:</strong> During vigorous exercise, oxygen supply is insufficient → anaerobic respiration → lactic acid accumulation → muscle fatigue and cramps</p>
+        </div>
+        
+        <div class="answer">
+            <div class="answer-number">A14. Light Phenomena:</div>
+            <p><strong>Reflection:</strong> Bouncing back of light from a surface</p>
+            <p><strong>Refraction:</strong> Bending of light when passing between media of different densities</p>
+            <p><strong>Total Internal Reflection (TIR):</strong> Complete reflection when light travels from denser to rarer medium at angle greater than critical angle</p>
+            <p><strong>Conditions for TIR:</strong> (1) Light must travel from denser to rarer medium, (2) Angle of incidence > critical angle</p>
+            <p><strong>Applications:</strong> Optical fibres, periscopes, binoculars, diamonds' brilliance</p>
+        </div>
+        
+        <div class="answer">
+            <div class="answer-number">A15. Soil Erosion:</div>
+            <p><strong>Definition:</strong> Removal of topsoil by wind, water, or human activities</p>
+            <p><strong>Causes:</strong> Deforestation, overgrazing, improper farming, heavy rainfall, strong winds</p>
+            <p><strong>Prevention methods:</strong> Afforestation and reforestation, Contour ploughing, Terrace farming, Building check dams, Crop rotation</p>
+            <p><strong>Importance:</strong> Preserves soil fertility, maintains water cycle, ensures food security</p>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 10pt; color: #666;">
+        — End of Science Quiz —
+    </div>
+</body>
+</html>
